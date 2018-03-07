@@ -14,12 +14,13 @@ import javax.xml.transform.stream.StreamResult;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.json.XML;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
 import com.spring.services.interfaces.ISOAPService;
 
+@Service
 public class SOAPService implements ISOAPService {
 
 	@Override

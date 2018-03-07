@@ -1,25 +1,35 @@
 package com.spring.controllers;
 
-import org.json.JSONException;
+
+import java.io.ByteArrayInputStream;
+import java.io.InputStream;
+
+import javax.xml.soap.MessageFactory;
+import javax.xml.soap.SOAPMessage;
+
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import com.spring.connection.SoapServerConnection;
 import com.spring.services.SOAPService;
 
+@RestController
 public class FrontController {
 
 	@Autowired
 	SOAPService soapService;
 	
-	@Autowired
-	
-	SoapServerConnection connection;
+
 	
 	@RequestMapping("/user")
 	public JSONObject sendToFront() throws Exception {
-		return soapService.getObjectData("User", connection.createTestSoapRequest());
+		
+		final String test = "<?xml version=\"1.0\" encoding=\"utf-8\"?><soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\"><soap:Body><getUserFromServiceResponse xmlns=\"http://localhost:9000\"><getUserFromServiceResult><NewDataSet xmlns=\"\"><User><id>1</id><name>Vlajko</name><lastName>Vlajkovic</lastName><yearOfBirth>1999</yearOfBirth></User></NewDataSet></getUserFromServiceResult></getUserFromServiceResponse></soap:Body></soap:Envelope>";
+		InputStream is = new ByteArrayInputStream(test.getBytes());
+		SOAPMessage soapMessage = MessageFactory.newInstance().createMessage(null, is);
+		return soapService.getObjectData("User", soapMessage);
 	}
 	
 }

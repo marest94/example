@@ -15,6 +15,8 @@ import javax.xml.soap.SOAPMessage;
 import javax.xml.soap.SOAPPart;
 
 //ref.:https://stackoverflow.com/questions/20460870/java-soap-request-reading-soap-response
+
+
 public class SoapServerConnection {
 
 	// should set pojo User model class for example
@@ -56,10 +58,10 @@ public class SoapServerConnection {
 		SOAPElement soapBodyElem1 = soapBodyElem.addChildElement("User", myNamespace);
 		SOAPElement soapBodyElem2 = soapBodyElem1.addChildElement("userName", myNamespace);
 		soapBodyElem2.addTextNode("Mile");
-		SOAPElement soapBodyElem3 = soapBodyElem1.addChildElement(lastName, myNamespace);
-		soapBodyElem3.addTextNode(lastName);
-		SOAPElement soapBodyElem4 = soapBodyElem1.addChildElement(phone, myNamespace);
-		soapBodyElem4.addTextNode(phone);
+////		SOAPElement soapBodyElem3 = soapBodyElem1.addChildElement(lastName, myNamespace);
+//		soapBodyElem3.addTextNode(lastName);
+//		SOAPElement soapBodyElem4 = soapBodyElem1.addChildElement(phone, myNamespace);
+//		soapBodyElem4.addTextNode(phone);
 
 		/*
 		 * <SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
