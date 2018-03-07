@@ -128,7 +128,7 @@ public class SoapServerConnection {
 	}
 	
 	public static SOAPMessage createTestSoapRequest() throws Exception {
-		final String test = "<?xml version=\"1.0\" encoding=\"utf-8\"?><soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\"><soap:Body><getUserFromServiceResponse xmlns=\"http://localhost:9000\"><getUserFromServiceResult><NewDataSet xmlns=\"\"><User><name>Vlajko</name><lastName>Vlajkovic</lastName><phone>0603112899</phone></User></NewDataSet></getUserFromServiceResult></getUserFromServiceResponse></soap:Body></soap:Envelope>";
+		final String test = "<?xml version=\"1.0\" encoding=\"utf-8\"?><soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\"><soap:Body><getUserFromServiceResponse xmlns=\"http://localhost:9000\"><getUserFromServiceResult><NewDataSet xmlns=\"\"><User><id>1</id><name>Vlajko</name><lastName>Vlajkovic</lastName><yearOfBirth>1999</yearOfBirth></User></NewDataSet></getUserFromServiceResult></getUserFromServiceResponse></soap:Body></soap:Envelope>";
 		InputStream is = new ByteArrayInputStream(test.getBytes());
 		SOAPMessage soapMessage = MessageFactory.newInstance().createMessage(null, is);
 		return soapMessage;

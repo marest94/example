@@ -29,7 +29,7 @@ example</description>
 				<configuration>
 					<scanIntervalSeconds>10</scanIntervalSeconds>
 					<webApp>
-						<contextPath>/vet-amb</contextPath>
+						<contextPath>/bank</contextPath>
 					</webApp>
 				</configuration>
 			</plugin>
