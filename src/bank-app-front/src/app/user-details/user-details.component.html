@@ -1,0 +1,20 @@
+<div *ngIf="user" class="col-md-12 col-sm-12">
+  <table class="table table-borderless">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">Lastname</th>
+        <th scope="col">Year of birth</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{ user.id }}</td>
+        <td>{{ user.name }}</td>
+        <td>{{ user.lastName }}</td>
+        <td class="text-center">{{ user.yearOfBirth }}</td>
+      </tr>
+    </tbody>
+  </table>      
+</div>

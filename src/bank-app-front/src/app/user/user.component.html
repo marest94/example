@@ -1,0 +1,65 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-6 col-md-6 col-sm-12">
+      <div class='form-group'>
+        <label for="filterName">Name filter:</label>
+        <input type="text" [(ngModel)]="filterName" id="filterName"> 
+     
+        <label for="filterYear">Year filter:</label>
+        <input type="number" [(ngModel)]="filterYear" id="filterYear"> 
+      </div>
+     
+      <table class="table table-borderless">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Lastname</th>
+            <th scope="col">Year</th>
+            <th scope="col" class="text-center">More info</th>
+            <th scope="col" class="text-center">Remove</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of (users | nameFilterPipe:filterName | yearFilterPipe:filterYear)" >
+            <th>{{ user.id }}.</th>
+            <td>{{ user.name }}</td>
+            <td>{{ user.lastName }}</td>
+            <td class="text-center">{{ user.yearOfBirth }}</td>
+            <td>
+              <input type="button" (click)="userInfo(user)" class="btn btn-info" value="More info">  
+            </td>
+            <td>
+              <input type="button" (click)="userRemove(user)" class="btn btn-danger" value="Remove">
+            </td>
+          </tr>
+        </tbody>
+      </table>      
+    </div>
+
+    <div class="col-lg-6 col-md-6 col-sm-12">
+      <div class="col-md-12 col-sm-12">
+        <form>
+          <div class="form-group">
+            <label for="formInputName">Id:</label>
+            <input type="number" class="form-control" id="formInputId" placeholder="Enter id" [(ngModel)]="id" name="id">
+          </div>
+          <div class="form-group">
+            <label for="formInputName">Name:</label>
+            <input type="text" class="form-control" id="formInputName" placeholder="Enter name" [(ngModel)]="name" name="name">
+          </div>
+          <div class="form-group">
+            <label for="formInputLastname">Lastname:</label>
+            <input type="text" class="form-control" id="formInputLastname" placeholder="lastname" [(ngModel)]="lastName" name="lastName">
+          </div>
+          <div class="form-group">
+            <label for="formInputYear">Year of birth:</label>
+            <input type="number" class="form-control" id="formInputYear" [(ngModel)]="yearOfBirth" name="yearOfBirth">
+          </div>
+          <button type="button" class="btn btn-success" (click)="addUser()">Add user</button>
+        </form>
+      </div>
+      <app-user-details *ngIf="selectedUser" [user]="selectedUser"></app-user-details>
+    </div>
+  </div>
+</div>  
