@@ -28,12 +28,14 @@ export class UserComponent implements OnInit {
   constructor(private userService: UserService) { }
 
   ngOnInit() { 
+    /* Getting all the users from db */
     this.userService.getUsers().subscribe(users => {
       console.log(users);
       this.users = users;
     });
   }
 
+  /* Removing the user */
   userRemove(user: User) {
 
     let index = this.users.indexOf(user);
@@ -42,6 +44,7 @@ export class UserComponent implements OnInit {
     this.userService.userRemove(user.id).subscribe(message => { console.log(message); });
   }
 
+  /* Adding a user */
   addUser() {
 
     this.newUser = new User(this.id, this.name, this.lastName, this.yearOfBirth);

@@ -1,6 +1,7 @@
 <div class="container">
   <div class="row">
     <div class="col-lg-6 col-md-6 col-sm-12">
+      <!-- Filters -->
       <div class='form-group'>
         <label for="filterName">Name filter:</label>
         <input type="text" [(ngModel)]="filterName" id="filterName"> 
@@ -9,6 +10,7 @@
         <input type="number" [(ngModel)]="filterYear" id="filterYear"> 
       </div>
      
+      <!-- Table: Listing all the users -->
       <table class="table table-borderless">
         <thead>
           <tr>
@@ -39,6 +41,7 @@
 
     <div class="col-lg-6 col-md-6 col-sm-12">
       <div class="col-md-12 col-sm-12">
+        <!-- Form: Adding new users -->
         <form>
           <div class="form-group">
             <label for="formInputName">Id:</label>

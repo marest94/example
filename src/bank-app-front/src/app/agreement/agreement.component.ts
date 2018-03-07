@@ -13,7 +13,6 @@ import { User } from '../user/User'
 export class AgreementComponent implements OnInit {
 
   agreements: Agreement[] = [];
-  //selectedUser: User;
   users: User[] = [];
   newAgreement: Agreement;
   id: number = 0;
@@ -24,17 +23,20 @@ export class AgreementComponent implements OnInit {
   constructor(private agreementService: AgreementService, private userService: UserService) { }
 
   ngOnInit() { 
+    /* Getting all the users from db */
     this.userService.getUsers().subscribe(users => {
       console.log(users);
       this.users = users;
     });
 
+    /* Getting all the agreements from db */
     this.agreementService.getAgreements().subscribe(agreements => {
       console.log(agreements);
       this.agreements = agreements;
     });
   }
 
+  /* Adding the agreement */
   addAgreement() {
 
     this.newAgreement = new Agreement(this.id, this.userID, this.type, this.date);
@@ -45,11 +47,4 @@ export class AgreementComponent implements OnInit {
     this.type = "";
     this.date = "";
   }
-
-  /*
-  userInfo(user: User) {  
-    this.selectedUser = user;
-    console.log(this.selectedUser);
-  }
-  */
 }
