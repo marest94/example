@@ -1,8 +1,5 @@
 package com.spring.connection;
 
-import java.io.ByteArrayInputStream;
-import java.io.InputStream;
-
 import javax.xml.soap.MessageFactory;
 import javax.xml.soap.MimeHeaders;
 import javax.xml.soap.SOAPBody;
@@ -13,9 +10,6 @@ import javax.xml.soap.SOAPEnvelope;
 import javax.xml.soap.SOAPException;
 import javax.xml.soap.SOAPMessage;
 import javax.xml.soap.SOAPPart;
-
-//ref.:https://stackoverflow.com/questions/20460870/java-soap-request-reading-soap-response
-
 
 public class SoapServerConnection {
 
@@ -38,13 +32,13 @@ public class SoapServerConnection {
 	}
 
 	/* This method creates an xml envelope
-	 *
+	 * to be sent to a specific ws
 	 * TODO make it dynamic to some extent...
-	 * 
+	 * it now works only by sending hardcode data
 	 */
 	private static void createSoapEnvelope(SOAPMessage soapMessage) throws SOAPException {
 		SOAPPart soapPart = soapMessage.getSOAPPart();
-
+		
 		String myNamespace = "myNamespace";
 		String myNamespaceURI = "http://localhost:9000";
 
@@ -54,28 +48,31 @@ public class SoapServerConnection {
 
 		// SOAP Body
 		SOAPBody soapBody = envelope.getBody();
+		//name of service method
 		SOAPElement soapBodyElem = soapBody.addChildElement("getUserFromService", myNamespace);
+		//what to expect
 		SOAPElement soapBodyElem1 = soapBodyElem.addChildElement("User", myNamespace);
-		SOAPElement soapBodyElem2 = soapBodyElem1.addChildElement("userName", myNamespace);
-		soapBodyElem2.addTextNode("Mile");
-////		SOAPElement soapBodyElem3 = soapBodyElem1.addChildElement(lastName, myNamespace);
-//		soapBodyElem3.addTextNode(lastName);
-//		SOAPElement soapBodyElem4 = soapBodyElem1.addChildElement(phone, myNamespace);
-//		soapBodyElem4.addTextNode(phone);
+		//by what param to find this user
+		SOAPElement soapBodyElem2 = soapBodyElem1.addChildElement("id", myNamespace);
+		soapBodyElem2.addTextNode("1");
 
-		/*
-		 * <SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
-		 * xmlns:myNamespace="http://localhost:9000"> <SOAP-ENV:Header/> <SOAP-ENV:Body>
-		 * <myNamespace:getUserFromServis> <myNamespace:User>
-		 * <myNamespace:userName>userName</myNamespace:userName>
-		 * <myNamespace:lastName>lastName</myNamespace:lastName>
-		 * <myNamespace:phone>phone</myNamespace:phone> </myNamespace:User>
-		 * </myNamespace:getUserFromServis> </SOAP-ENV:Body> </SOAP-ENV:Envelope>
+		/*	How this SOAPmassage to server should look like
+		 * <SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"xmlns:myNamespace="http://localhost:9000">
+		 * 		<SOAP-ENV:Header/> 
+		 * 			<SOAP-ENV:Body>
+		 * 				<myNamespace:getUserFromServis>
+		 * 					<myNamespace:User> 
+		 * 						<myNamespace:id>1</myNamespace:id> 
+		 * 					</myNamespace:User>
+		 * 				</myNamespace:getUserFromServis> 
+		 * 			</SOAP-ENV:Body> 
+		 * 		</SOAP-ENV:Envelope>
 		 */
 	}
 
 	// get message from soap
-	private static void callSoapWebService(String soapEndpointUrl, String soapAction) {
+	//TODO make soapEndpointUrl and soapAction dynamic to call for differnet ws
+	public static void callSoapWebService(String soapEndpointUrl, String soapAction) {
 		try {
 			// Create SOAP Connection
 			SOAPConnectionFactory soapConnectionFactory = SOAPConnectionFactory.newInstance();
@@ -96,15 +93,24 @@ public class SoapServerConnection {
 			e.printStackTrace();
 		}
 		/*
-		 * From server: <?xml version="1.0" encoding="utf-8"?><soap:Envelope
-		 * xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
-		 * xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-		 * xmlns:xsd="http://www.w3.org/2001/XMLSchema"> <soap:Body>
-		 * <getUserFromServiceResponse xmlns="http://localhost:9000">
-		 * <getUserFromServiceResult> <NewDataSet xmlns=""> <User> <name>Vlajko</name>
-		 * <lastName>Vlajkovic</lastName> <phone>0603112899</phone> </User>
-		 * </NewDataSet> </getUserFromServiceResult> </getUserFromServiceResponse>
-		 * </soap:Body> </soap:Envelope>
+		 * How this SOAPmassage from server should look like From server: 
+		 * <?xmlversion="1.0" encoding="utf-8"?>
+		 * 	<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		 * 		<soap:Body>
+		 * 			<getUserFromServiceResponse xmlns="http://localhost:9000">
+		 * 				<getUserFromServiceResult> 
+		 * 					<NewDataSet xmlns=""> 
+		 * 						<User>
+		 * 							<id>1</id>
+		 * 							<name>Vlajko</name> 
+		 * 							<lastName>Vlajkovic</lastName>
+		 * 							<yearOfBirth>0603112899</yearOfBirth> 
+		 * 						</User> 	
+		 * 					</NewDataSet>
+		 * 				</getUserFromServiceResult> 
+		 * 			</getUserFromServiceResponse> 
+		 * 		</soap:Body>
+		 * </soap:Envelope>
 		 */
 	}
 
@@ -127,14 +133,6 @@ public class SoapServerConnection {
 
 		return soapMessage;
 
-	}
-	
-	public static SOAPMessage createTestSoapRequest() throws Exception {
-		final String test = "<?xml version=\"1.0\" encoding=\"utf-8\"?><soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\"><soap:Body><getUserFromServiceResponse xmlns=\"http://localhost:9000\"><getUserFromServiceResult><NewDataSet xmlns=\"\"><User><id>1</id><name>Vlajko</name><lastName>Vlajkovic</lastName><yearOfBirth>1999</yearOfBirth></User></NewDataSet></getUserFromServiceResult></getUserFromServiceResponse></soap:Body></soap:Envelope>";
-		InputStream is = new ByteArrayInputStream(test.getBytes());
-		SOAPMessage soapMessage = MessageFactory.newInstance().createMessage(null, is);
-		return soapMessage;
-		
 	}
 
 }
