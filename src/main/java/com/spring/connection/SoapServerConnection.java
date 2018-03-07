@@ -1,5 +1,8 @@
 package com.spring.connection;
 
+import java.io.ByteArrayInputStream;
+import java.io.InputStream;
+
 import javax.xml.soap.MessageFactory;
 import javax.xml.soap.MimeHeaders;
 import javax.xml.soap.SOAPBody;
@@ -51,8 +54,8 @@ public class SoapServerConnection {
 		SOAPBody soapBody = envelope.getBody();
 		SOAPElement soapBodyElem = soapBody.addChildElement("getUserFromService", myNamespace);
 		SOAPElement soapBodyElem1 = soapBodyElem.addChildElement("User", myNamespace);
-		SOAPElement soapBodyElem2 = soapBodyElem1.addChildElement("", myNamespace);
-		soapBodyElem2.addTextNode(userName);
+		SOAPElement soapBodyElem2 = soapBodyElem1.addChildElement("userName", myNamespace);
+		soapBodyElem2.addTextNode("Mile");
 		SOAPElement soapBodyElem3 = soapBodyElem1.addChildElement(lastName, myNamespace);
 		soapBodyElem3.addTextNode(lastName);
 		SOAPElement soapBodyElem4 = soapBodyElem1.addChildElement(phone, myNamespace);
@@ -122,6 +125,14 @@ public class SoapServerConnection {
 
 		return soapMessage;
 
+	}
+	
+	public static SOAPMessage createTestSoapRequest() throws Exception {
+		final String test = "<?xml version=\"1.0\" encoding=\"utf-8\"?><soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\"><soap:Body><getUserFromServiceResponse xmlns=\"http://localhost:9000\"><getUserFromServiceResult><NewDataSet xmlns=\"\"><User><name>Vlajko</name><lastName>Vlajkovic</lastName><phone>0603112899</phone></User></NewDataSet></getUserFromServiceResult></getUserFromServiceResponse></soap:Body></soap:Envelope>";
+		InputStream is = new ByteArrayInputStream(test.getBytes());
+		SOAPMessage soapMessage = MessageFactory.newInstance().createMessage(null, is);
+		return soapMessage;
+		
 	}
 
 }
