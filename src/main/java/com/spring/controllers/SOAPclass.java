@@ -23,6 +23,8 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
 public class SOAPclass {
+	
+	//Response from server 
 	public static int PRETTY_PRINT_INDENT_FACTOR = 5;
 	public static String TEST_XML_STRING = "<?xml version=\"1.0\" encoding=\"utf-8\"?><soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\"><soap:Body><getUserFromServiceResponse xmlns=\"http://localhost:9000\"><getUserFromServiceResult><NewDataSet xmlns=\"\"><User><name>Vlajko</name><lastName>Vlajkovic</lastName><phone>0603112899</phone></User></NewDataSet></getUserFromServiceResult></getUserFromServiceResponse></soap:Body></soap:Envelope>";
 
@@ -63,7 +65,7 @@ public class SOAPclass {
 		InputStream is = new ByteArrayInputStream(test.getBytes());
 		SOAPMessage msg = MessageFactory.newInstance().createMessage(null, is);
 		jsonConvert();
-		System.out.println(getFullData("User", msg));
+		System.out.println(getFullData("asda", msg));
 	}
 
 }
