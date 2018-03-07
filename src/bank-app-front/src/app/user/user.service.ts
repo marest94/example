@@ -21,16 +21,15 @@ export class UserService {
   }
 
   getUsers(): Observable<User[]> {
-
+    console.log(this.http.get("http://localhost:8080/bank/user").map((res:any) => res.json()).catch(this.error));
     console.log("userService::getUsers();");
-
-    return this.http.get("http://localhost:3000/users").map((res:any) => res.json()).catch(this.error);  
+    return this.http.get("http://localhost:8080/bank/user").map((res:any) => res.json()).catch(this.error);  
   }
 
   userRemove(id: number): Observable<any> {
 
     console.log("userService::userRemove(" + id + ");");
-    return this.http.delete("http://localhost:3000/users/" + id);
+    return this.http.delete("http://localhost:8080/users/" + id);
   }
 
   addUser(user: User): Observable<any> {
@@ -38,7 +37,7 @@ export class UserService {
     
     this.users.push(user);
 
-    return this.http.post("http://localhost:3000/users/", user);
+    return this.http.post("http://localhost:8080/users/", user);
   }
 
 
