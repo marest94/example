@@ -1,9 +1,5 @@
 Manifest-Version: 1.0
-<<<<<<< HEAD
-Built-By: Slobodan Obradovic
-=======
-Built-By: Mile Ignjatovic
->>>>>>> bb37ff057771d5e5fe4056f131a7e1685530a530
-Build-Jdk: 1.8.0_161
+Built-By: Marko Stojanovic
+Build-Jdk: 1.8.0_162
 Created-By: Maven Integration for Eclipse
 

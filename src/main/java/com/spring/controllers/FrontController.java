@@ -18,7 +18,6 @@ import com.spring.connection.SoapServerConnection;
 import com.spring.services.SOAPService;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:4200")
 public class FrontController {
 
 	@Autowired
@@ -31,6 +30,11 @@ public class FrontController {
 		InputStream is = new ByteArrayInputStream(test.getBytes());
 		SOAPMessage soapMessage = MessageFactory.newInstance().createMessage(null, is);
 		return soapService.getObjectData("User", soapMessage);
+	}
+	
+	@RequestMapping(path = "/proba", method = RequestMethod.GET)
+	public String proba() {
+		return "sdasdasdasD";
 	}
 	
 }
