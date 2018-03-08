@@ -24,7 +24,6 @@ public class UserRepository {
 		u2.setLastName("Markovic");
 		u2.setYearOfBirth(1994);
 		usersMap.put(u2.getUserID(), u2);
-		
 	}
 	
 	public User getUser(int userID){
