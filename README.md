@@ -1,6 +1,6 @@
 # bank-app-case-study
 
-Bank-app-case-study is a web application developed using [Angular] (https://angular.io/) for frontend and [Java Spring framework] (http://spring.io/) 
+Bank-app-case-study is a web application developed using [Angular](https://angular.io/) for frontend and [Java Spring framework](http://spring.io/) 
 for backend that uses soap request/response for soap-service and soap-service-consumer communication and then send the data in JSON to frontend.
 
 ## Getting Started
