@@ -13,6 +13,7 @@ import com.spring.app.soap.wsdl.User;
 @Service
 public class UserClientServiceImpl implements IUserClientService {
 
+	/* Overrided method from IUserClientService with implementation for getting user from server*/
 	@Override
 	public User getUserById(int id) {
 		AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext();

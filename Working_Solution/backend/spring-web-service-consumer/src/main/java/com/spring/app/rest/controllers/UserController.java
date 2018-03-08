@@ -17,21 +17,40 @@ import com.spring.app.soap.wsdl.User;
 @CrossOrigin()
 public class UserController {
 	
+	
 	@Autowired
 	IUserClientService userService;
+	
 	
 	@RequestMapping("/{id}")
 	public User getById(@PathVariable int id) {
 		return userService.getUserById(id);
 	}
 	
+	/*Purpose of this method is to emulate real answer from server with user array*/
+	
 	@RequestMapping("/all")
 	public List<User> getById() {
 		User u1 = userService.getUserById(1);
 		User u2 = userService.getUserById(2);
+		User u3 = userService.getUserById(3);
+		User u4 = userService.getUserById(4);
+		User u5 = userService.getUserById(5);
+		User u6 = userService.getUserById(6);
+		User u7 = userService.getUserById(7);
+		User u8 = userService.getUserById(8);
+		User u9 = userService.getUserById(9);
 		List<User> users = new ArrayList<User>();
 		users.add(u1);
 		users.add(u2);
+		users.add(u3);
+		users.add(u4);
+		users.add(u5);
+		users.add(u6);
+		users.add(u7);
+		users.add(u8);
+		users.add(u9);
+		
 		return users;
 	}
 	

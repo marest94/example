@@ -3,6 +3,9 @@ package com.spring.app.rest.configs;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
+
+/*Configuration for mapping*/
+
 @Configuration
 public class WebConfig extends AbstractAnnotationConfigDispatcherServletInitializer{
 	@Override

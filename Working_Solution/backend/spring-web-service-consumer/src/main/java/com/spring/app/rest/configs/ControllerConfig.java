@@ -4,7 +4,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 
-/*Controller for scanning controller package*/
+/*Configuration for scanning controllers package*/
 
 @Configuration
 @ComponentScan(basePackages = "com.spring.app.rest.controllers")

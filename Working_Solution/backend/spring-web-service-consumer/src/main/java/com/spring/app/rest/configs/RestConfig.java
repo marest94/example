@@ -6,6 +6,8 @@ import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import org.springframework.web.filter.CorsFilter;
  
+
+/*Configuration for REST to solve Access-Control-Allow-Origin problem*/
 @Configuration
 public class RestConfig {
     @Bean
@@ -21,7 +23,6 @@ public class RestConfig {
         config.addAllowedMethod("PUT");
         config.addAllowedMethod("DELETE");
         source.registerCorsConfiguration("/**", config);
-        System.out.println("access controll added rest config MileBaja");
         return new CorsFilter(source);
         
     }
