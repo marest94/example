@@ -1,5 +1,7 @@
 package com.spring.app.rest.services;
 
+import javax.servlet.http.HttpServletResponse;
+
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.stereotype.Service;
 
@@ -20,7 +22,6 @@ public class UserClientServiceImpl implements IUserClientService {
 		response.getUserById(id);
 		User u = response.getUserById(id).getUser();
 		ctx.close(); //NOTE: DELETE ME IF IT DOESN'T WORK!
-		
 		return u;
 	}
 }

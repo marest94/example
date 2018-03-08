@@ -1,9 +1,9 @@
-C:\Users\Mile Ignjatovic\Documents\Eclipse Projects\spring-soap-working-version\spring-soap\soap-web-service\src\main\java\com\spring\app\repositories\UserRepository.java
-C:\Users\Mile Ignjatovic\Documents\Eclipse Projects\spring-soap-working-version\spring-soap\soap-web-service\src\main\java\localhost\_8080\soap\User.java
-C:\Users\Mile Ignjatovic\Documents\Eclipse Projects\spring-soap-working-version\spring-soap\soap-web-service\src\main\java\localhost\_8080\soap\GetUserRequest.java
-C:\Users\Mile Ignjatovic\Documents\Eclipse Projects\spring-soap-working-version\spring-soap\soap-web-service\src\main\java\localhost\_8080\soap\ObjectFactory.java
-C:\Users\Mile Ignjatovic\Documents\Eclipse Projects\spring-soap-working-version\spring-soap\soap-web-service\src\main\java\com\spring\app\endpoints\UserEndpoint.java
-C:\Users\Mile Ignjatovic\Documents\Eclipse Projects\spring-soap-working-version\spring-soap\soap-web-service\src\main\java\localhost\_8080\soap\package-info.java
-C:\Users\Mile Ignjatovic\Documents\Eclipse Projects\spring-soap-working-version\spring-soap\soap-web-service\src\main\java\com\spring\app\configs\AppConfig.java
-C:\Users\Mile Ignjatovic\Documents\Eclipse Projects\spring-soap-working-version\spring-soap\soap-web-service\src\main\java\com\spring\app\AppInitializer.java
-C:\Users\Mile Ignjatovic\Documents\Eclipse Projects\spring-soap-working-version\spring-soap\soap-web-service\src\main\java\localhost\_8080\soap\GetUserResponse.java
+C:\Users\Mile Ignjatovic\Desktop\project2\example\soap-web-service\src\main\java\com\spring\app\AppInitializer.java
+C:\Users\Mile Ignjatovic\Desktop\project2\example\soap-web-service\src\main\java\com\spring\app\repositories\UserRepository.java
+C:\Users\Mile Ignjatovic\Desktop\project2\example\soap-web-service\src\main\java\com\spring\app\configs\AppConfig.java
+C:\Users\Mile Ignjatovic\Desktop\project2\example\soap-web-service\src\main\java\localhost\_8080\soap\ObjectFactory.java
+C:\Users\Mile Ignjatovic\Desktop\project2\example\soap-web-service\src\main\java\localhost\_8080\soap\package-info.java
+C:\Users\Mile Ignjatovic\Desktop\project2\example\soap-web-service\src\main\java\localhost\_8080\soap\GetUserResponse.java
+C:\Users\Mile Ignjatovic\Desktop\project2\example\soap-web-service\src\main\java\com\spring\app\endpoints\UserEndpoint.java
+C:\Users\Mile Ignjatovic\Desktop\project2\example\soap-web-service\src\main\java\localhost\_8080\soap\GetUserRequest.java
+C:\Users\Mile Ignjatovic\Desktop\project2\example\soap-web-service\src\main\java\localhost\_8080\soap\User.java
