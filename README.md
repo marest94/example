@@ -16,7 +16,7 @@ To check whether or not you have Node.js installed, visit your console / command
 node -v
 ```
 If this command goes unrecognized, you need to install Node.js.
-Visit the [Node.js download page] (https://nodejs.org/en/download/) and choose either the Windows or Mac installer based on your OS.
+Visit the [Node.js download page](https://nodejs.org/en/download/) and choose either the Windows or Mac installer based on your OS.
 Accept the agreement, choose an installation folder, and hit Next on the Custom Setup page. By default, it will install the npm package manager which we will need.
 After it's installed, close your console / command line and reload it. You can now run the 
 ```sh
@@ -34,7 +34,7 @@ At the console, type:
 
 ### Run the application
 
-1. **Install [STS] (https://spring.io/tools/sts) in eclipse using eclipse marketplace**
+1. **Install [STS](https://spring.io/tools/sts) in eclipse using eclipse marketplace**
 
 2. **Import soap-web-service and spring-web-service-consumer from backend folder and do the maven -> update project on soap-web-service**
 
