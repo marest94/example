@@ -58,6 +58,10 @@ and
 * [Angular](https://angular.io/) - Angular
 * [Spring](http://spring.io/) - Spring
 
+## Notes
+
+FirstAproach folder is a folder that contains the first version of soap service/consumer communication that didn't work because of an error that wasn't directly connected to that part of the code. So basicaly it actualy works, but instead we went for the different aproach.
+
 ## Authors
 
 * **Natasa Ljubisavljevic** - [natljub](https://github.com/natljub)
