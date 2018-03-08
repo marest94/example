@@ -10,9 +10,8 @@ These instructions will get you a copy of the application up and running on your
 ### Prerequisites
 
 1. **Node.js with NPM (Node Package Manager)**
-2. **Angular-CLI (Command Line Interface)**
 
-1. To check whether or not you have Node.js installed, visit your console / command line and type:
+To check whether or not you have Node.js installed, visit your console / command line and type:
 ```sh
 node -v
 ```
@@ -25,7 +24,9 @@ node -v
 ```
 command and it will provide you with the current version number.
 
-2. Next, we need to install the Angular-CLI. This tool allows you to create Angular projects as well as help you with various development tasks.
+2. **Angular-CLI (Command Line Interface)**
+
+Next, we need to install the Angular-CLI. This tool allows you to create Angular projects as well as help you with various development tasks.
 At the console, type:
 ```sh
 > npm install -g @angular/cli
