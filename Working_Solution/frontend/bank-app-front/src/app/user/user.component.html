@@ -24,7 +24,7 @@
         </thead>
         <tbody>
           <tr *ngFor="let user of (users | nameFilterPipe:filterName | yearFilterPipe:filterYear)" >
-            <th>{{ user.id }}.</th>
+            <th>{{ user.userID }}.</th>
             <td>{{ user.name }}</td>
             <td>{{ user.lastName }}</td>
             <td class="text-center">{{ user.yearOfBirth }}</td>
@@ -45,7 +45,7 @@
         <form>
           <div class="form-group">
             <label for="formInputName">Id:</label>
-            <input type="number" class="form-control" id="formInputId" placeholder="Enter id" [(ngModel)]="id" name="id">
+            <input type="number" class="form-control" id="formInputId" placeholder="Enter id" [(ngModel)]="userID" name="userID">
           </div>
           <div class="form-group">
             <label for="formInputName">Name:</label>

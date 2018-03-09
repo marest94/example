@@ -32,7 +32,7 @@ export class AgreementService {
     
     this.agreements.push(agreement);
 
-    return this.http.post("http://localhost:9999/agreements/", agreement);
+    return this.http.post("http://localhost:9999/agreements/add", agreement);
   }
 
 

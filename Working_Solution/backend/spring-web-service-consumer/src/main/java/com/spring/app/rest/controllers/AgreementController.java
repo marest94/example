@@ -5,7 +5,10 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.spring.app.rest.services.interfaces.IAgreementClientService;
@@ -19,6 +22,9 @@ public class AgreementController {
 	
 	@Autowired
 	IAgreementClientService agreementService;
+	
+	private List<Agreement> agreements = new ArrayList<Agreement>();
+
 
 	@RequestMapping("/all")
 	public List<Agreement> getById() {
@@ -33,4 +39,21 @@ public class AgreementController {
 		
 		return agreements;
 	}
+	
+	@RequestMapping(path = "/add", method = RequestMethod.POST)
+	public String add(@RequestBody Agreement a) {
+	    agreements.add(a);  // users list must be added like a property to the controller class, it cant be seen from the controller upper (getUsers controller)
+	    return "redirect:all";
+	}
+	
+	/* NOTE: Not implemented yet in anagular@!!
+	@RequestMapping("/remove/{id}")
+	public String remove(@PathVariable int id) {
+		Agreement a = agreementService.getAgreementById(id);
+		
+		agreements.remove(a);
+		
+		return "redirect:all";
+	} */
+	
 }

@@ -1,14 +1,14 @@
 export class Agreement {
   
-    public id: number;
+    public agreementID: number;
     public userID: number;
-    public type: string;
+    public agreementType: string;
     public date: string;
         
-    constructor(id: number, userID: number, type: string, date: string) {
-      this.id = id;
+    constructor(agreementID: number, userID: number, agreementType: string, date: string) {
+      this.agreementID = agreementID;
       this.userID = userID;
-      this.type = type;
+      this.agreementType = agreementType;
       this.date = date;
     }
   }

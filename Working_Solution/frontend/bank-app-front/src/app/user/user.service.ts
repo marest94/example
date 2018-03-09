@@ -11,7 +11,7 @@ import { User } from './User';
 export class UserService {
 
   users: User[] = [];
-  id: number;
+  userID: number;
   name: string;
   lastName: string;
   yearOfBirth: number;
@@ -26,10 +26,10 @@ export class UserService {
     return this.http.get("http://localhost:9999/users/all").map((res:any) => res.json()).catch(this.error);  
   }
 
-  userRemove(id: number): Observable<any> {
+  userRemove(userID: number): Observable<any> {
 
-    console.log("userService::userRemove(" + id + ");");
-    return this.http.delete("http://localhost:8080/users/" + id);
+    console.log("userService::userRemove(" + userID + ");");
+    return this.http.delete("http://localhost:9999/users/remove/" + userID);
   }
 
   addUser(user: User): Observable<any> {
@@ -37,7 +37,7 @@ export class UserService {
     
     this.users.push(user);
 
-    return this.http.post("http://localhost:8080/users/", user);
+    return this.http.post("http://localhost:9999/users/add", user);
   }
 
 

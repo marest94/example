@@ -1,12 +1,12 @@
 export class User {
   
-  public id: number;
+  public userID: number;
   public name: string;
   public lastName: string;
   public yearOfBirth: number;
   
-  constructor(id: number, name: string, lastName: string, yearOfBirth: number) {
-    this.id = id;
+  constructor(userID: number, name: string, lastName: string, yearOfBirth: number) {
+    this.userID = userID;
     this.name = name;
     this.lastName = lastName;
     this.yearOfBirth = yearOfBirth;

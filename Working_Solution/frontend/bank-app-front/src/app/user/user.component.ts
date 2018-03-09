@@ -16,7 +16,7 @@ export class UserComponent implements OnInit {
   users: User[] = [];
   selectedUser: User;
   newUser: User;
-  id: number = 0;
+  userID: number = 0;
   name: string = "";
   lastName: string = "";
   yearOfBirth: number = 0;
@@ -41,16 +41,16 @@ export class UserComponent implements OnInit {
     let index = this.users.indexOf(user);
     this.users.splice(index, 1);
 
-    this.userService.userRemove(user.id).subscribe(message => { console.log(message); });
+    this.userService.userRemove(user.userID).subscribe(message => { console.log(message); });
   }
 
   /* Adding a user */
   addUser() {
 
-    this.newUser = new User(this.id, this.name, this.lastName, this.yearOfBirth);
+    this.newUser = new User(this.userID, this.name, this.lastName, this.yearOfBirth);
     this.userService.addUser(this.newUser).subscribe(user => this.users.push(this.newUser));
 
-    this.id = 0;
+    this.userID = 0;
     this.name = "";
     this.lastName = "";
     this.yearOfBirth = 0;
@@ -66,7 +66,7 @@ export class UserComponent implements OnInit {
     let index = this.users.indexOf(user);
     this.users.splice(index, 1);
 
-    this.userService.userRemove(user.id).subscribe(message => { console.log(message); });
+    this.userService.userRemove(user.userID).subscribe(message => { console.log(message); });
     this.showSingleUser = false;
   }
 }
