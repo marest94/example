@@ -15,9 +15,9 @@ export class AgreementComponent implements OnInit {
   agreements: Agreement[] = [];
   users: User[] = [];
   newAgreement: Agreement;
-  id: number = 0;
+  agreementID: number = 0;
   userID: number = 0;
-  type: string = "";
+  agreementType: string = "";
   date: string = "";
   
   constructor(private agreementService: AgreementService, private userService: UserService) { }
@@ -39,12 +39,12 @@ export class AgreementComponent implements OnInit {
   /* Adding the agreement */
   addAgreement() {
 
-    this.newAgreement = new Agreement(this.id, this.userID, this.type, this.date);
+    this.newAgreement = new Agreement(this.agreementID, this.userID, this.agreementType, this.date);
     this.agreementService.addAgreement(this.newAgreement).subscribe(agreement => this.agreements.push(this.newAgreement));
 
-    this.id = 0;
+    this.agreementID = 0;
     this.userID = 0;
-    this.type = "";
+    this.agreementType = "";
     this.date = "";
   }
 }

@@ -11,9 +11,9 @@ import { Agreement } from './agreement';
 export class AgreementService {
 
   agreements: Agreement[] = [];
-  id: number;
+  agreementID: number;
   userID: number;
-  type: string;
+  agreementType: string;
   date: string;
 
   constructor(private http:Http) {
@@ -24,7 +24,7 @@ export class AgreementService {
 
     console.log("userService::getAgreements();");
 
-    return this.http.get("http://localhost:3001/agreements").map((res:any) => res.json()).catch(this.error);  
+    return this.http.get("http://localhost:9999/agreements/all").map((res:any) => res.json()).catch(this.error);  
   }
 
   addAgreement(agreement: Agreement): Observable<any> {
@@ -32,7 +32,7 @@ export class AgreementService {
     
     this.agreements.push(agreement);
 
-    return this.http.post("http://localhost:3001/agreements/", agreement);
+    return this.http.post("http://localhost:9999/agreements/", agreement);
   }
 
 

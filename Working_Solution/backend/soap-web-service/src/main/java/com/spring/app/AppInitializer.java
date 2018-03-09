@@ -7,6 +7,8 @@ import org.springframework.ws.transport.http.MessageDispatcherServlet;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.ServletRegistration.Dynamic;
+
+import com.spring.app.configs.AgreementsConfig;
 import com.spring.app.configs.AppConfig;
 
 @Configuration
@@ -16,6 +18,7 @@ public class AppInitializer implements WebApplicationInitializer {
 
 		AnnotationConfigWebApplicationContext ctx = new AnnotationConfigWebApplicationContext();
 		ctx.register(AppConfig.class);
+		ctx.register(AgreementsConfig.class);
 		ctx.setServletContext(servletContext);
 		MessageDispatcherServlet servlet = new MessageDispatcherServlet();
 		servlet.setApplicationContext(ctx);

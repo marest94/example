@@ -14,9 +14,9 @@
         </thead>
         <tbody>
           <tr *ngFor="let agreement of agreements" >
-            <th>{{ agreement.id }}.</th>
+            <th>{{ agreement.agreementID }}.</th>
             <td>{{ agreement.userID }}</td>
-            <td>{{ agreement.type }}</td>
+            <td>{{ agreement.agreementType }}</td>
             <td class="text-center">{{ agreement.date }}</td>
         </tbody>
       </table>      
@@ -28,7 +28,7 @@
         <form>
           <div class="form-group">
             <label for="formInputAgreementId">AgreementID:</label>
-            <input type="number" class="form-control" id="formInputAgreementId" placeholder="Enter agreement id" [(ngModel)]="id" name="id">
+            <input type="number" class="form-control" id="formInputAgreementId" placeholder="Enter agreement id" [(ngModel)]="agreementID" name="agreementID">
           </div>
           <div class="form-group">
             <label for="formInputUserId">UserID:</label>
@@ -39,7 +39,7 @@
           </div>
           <div class="form-group">
             <label for="formInputAgreementType">Type:</label>
-            <select id="type" name="type" [(ngModel)]="type" class="form-control">
+            <select id="agreementType" name="agreementType" [(ngModel)]="agreementType" class="form-control">
               <option selected="selected" disabled>Agreement type...</option>
               <option [value]="'credit'">credit</option>
               <option [value]="'savings'">savings</option>

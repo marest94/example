@@ -4,7 +4,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.oxm.jaxb.Jaxb2Marshaller;
 
-import com.spring.app.soap.clients.UserClient;
+import com.spring.app.soap.clients.Client;
 
 @Configuration
 public class UserClientConfig {
@@ -17,8 +17,8 @@ public class UserClientConfig {
 	}
 	
 	@Bean
-	public UserClient studentClient(Jaxb2Marshaller marshaller) {
-		UserClient client = new UserClient();
+	public Client userClient(Jaxb2Marshaller marshaller) {
+		Client client = new Client();
 		client.setDefaultUri("http://localhost:8080/soapws/users.wsdl");
 		client.setMarshaller(marshaller);
 		client.setUnmarshaller(marshaller);
