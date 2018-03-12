@@ -1,0 +1,25 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://localhost:8080/soap"
+           targetNamespace="http://localhost:8080/soap" elementFormDefault="qualified">
+    <xs:element name="getService1Request">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="service1ID" type="xs:int"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="getService1Response">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="service1" type="tns:service1"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="service1">
+        <xs:sequence>
+            <xs:element name="service1ID" type="xs:int"/>
+            <xs:element name="userID" type="xs:int"/>
+            <xs:element name="service1Type" type="xs:string"/>
+            <xs:element name="date" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema> 

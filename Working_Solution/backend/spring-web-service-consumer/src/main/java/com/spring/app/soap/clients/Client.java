@@ -5,6 +5,8 @@ import org.springframework.ws.soap.client.core.SoapActionCallback;
 
 import com.spring.app.soap.wsdl.GetAgreementsRequest;
 import com.spring.app.soap.wsdl.GetAgreementsResponse;
+import com.spring.app.soap.wsdl.GetService1Request;
+import com.spring.app.soap.wsdl.GetService1Response;
 import com.spring.app.soap.wsdl.GetUserRequest;
 import com.spring.app.soap.wsdl.GetUserResponse;
 
@@ -24,5 +26,14 @@ public class Client extends WebServiceGatewaySupport  {
 				request, new SoapActionCallback("http://localhost:8080/soapws/getAgreementsResponse"));
 		return response;
 	}
+
+	public GetService1Response getServiceById(int serviceID) {
+		GetService1Request request = new GetService1Request();
+		request.setService1ID(serviceID);
+		GetService1Response response = (GetService1Response) getWebServiceTemplate().marshalSendAndReceive(
+				request, new SoapActionCallback("http://localhost:8080/soapws/getService1Response"));
+		return response;
+	}
+	
 	
 } 

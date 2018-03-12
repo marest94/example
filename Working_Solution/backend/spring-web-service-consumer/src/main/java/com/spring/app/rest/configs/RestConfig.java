@@ -1,3 +1,4 @@
+
 package com.spring.app.rest.configs;
 
 import org.springframework.context.annotation.Bean;

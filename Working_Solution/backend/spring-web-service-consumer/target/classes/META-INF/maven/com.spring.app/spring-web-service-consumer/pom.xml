@@ -69,6 +69,9 @@
 						<schema>
 		                	<url>http://localhost:8080/soapws/agreements.wsdl</url>
 		            	</schema>
+		            	<schema>
+		                	<url>http://localhost:8080/soapws/service1.wsdl</url>
+		            	</schema>
 					</schemas>
 				</configuration>
 			</plugin>

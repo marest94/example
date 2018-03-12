@@ -1,16 +1,24 @@
-C:\Users\Mile Ignjatovic\Documents\Eclipse Projects\spring-soap-working-version\spring-soap\spring-web-service-consumer\src\main\java\com\spring\app\rest\controllers\VeterinarController.java
-C:\Users\Mile Ignjatovic\Documents\Eclipse Projects\spring-soap-working-version\spring-soap\spring-web-service-consumer\target\generated-sources\xjc\com\spring\app\soap\wsdl\GetUserResponse.java
-C:\Users\Mile Ignjatovic\Documents\Eclipse Projects\spring-soap-working-version\spring-soap\spring-web-service-consumer\src\main\java\com\spring\app\rest\configs\WebConfig.java
-C:\Users\Mile Ignjatovic\Documents\Eclipse Projects\spring-soap-working-version\spring-soap\spring-web-service-consumer\src\main\java\com\spring\app\soap\configs\UserClientConfig.java
-C:\Users\Mile Ignjatovic\Documents\Eclipse Projects\spring-soap-working-version\spring-soap\spring-web-service-consumer\src\main\java\com\spring\app\rest\configs\MvcConfig.java
-C:\Users\Mile Ignjatovic\Documents\Eclipse Projects\spring-soap-working-version\spring-soap\spring-web-service-consumer\target\generated-sources\xjc\com\spring\app\soap\wsdl\package-info.java
-C:\Users\Mile Ignjatovic\Documents\Eclipse Projects\spring-soap-working-version\spring-soap\spring-web-service-consumer\src\main\java\com\spring\app\rest\configs\ControllerConfig.java
-C:\Users\Mile Ignjatovic\Documents\Eclipse Projects\spring-soap-working-version\spring-soap\spring-web-service-consumer\src\main\java\com\spring\app\rest\repo\FromServerRepo.java
-C:\Users\Mile Ignjatovic\Documents\Eclipse Projects\spring-soap-working-version\spring-soap\spring-web-service-consumer\src\main\java\RunUserClient.java
-C:\Users\Mile Ignjatovic\Documents\Eclipse Projects\spring-soap-working-version\spring-soap\spring-web-service-consumer\target\generated-sources\xjc\com\spring\app\soap\wsdl\GetUserRequest.java
-C:\Users\Mile Ignjatovic\Documents\Eclipse Projects\spring-soap-working-version\spring-soap\spring-web-service-consumer\src\main\java\com\spring\app\rest\services\UserClientServisImpl.java
-C:\Users\Mile Ignjatovic\Documents\Eclipse Projects\spring-soap-working-version\spring-soap\spring-web-service-consumer\src\main\java\com\spring\app\soap\clients\UserClient.java
-C:\Users\Mile Ignjatovic\Documents\Eclipse Projects\spring-soap-working-version\spring-soap\spring-web-service-consumer\src\main\java\com\spring\app\rest\services\interfaces\IUserClientServis.java
-C:\Users\Mile Ignjatovic\Documents\Eclipse Projects\spring-soap-working-version\spring-soap\spring-web-service-consumer\src\main\java\com\spring\app\rest\configs\ServiceConfig.java
-C:\Users\Mile Ignjatovic\Documents\Eclipse Projects\spring-soap-working-version\spring-soap\spring-web-service-consumer\target\generated-sources\xjc\com\spring\app\soap\wsdl\User.java
-C:\Users\Mile Ignjatovic\Documents\Eclipse Projects\spring-soap-working-version\spring-soap\spring-web-service-consumer\target\generated-sources\xjc\com\spring\app\soap\wsdl\ObjectFactory.java
+C:\Users\Petar Stojanovic\Desktop\test\example\Working_Solution\backend\spring-web-service-consumer\target\generated-sources\xjc\com\spring\app\soap\wsdl\GetAgreementsRequest.java
+C:\Users\Petar Stojanovic\Desktop\test\example\Working_Solution\backend\spring-web-service-consumer\src\main\java\com\spring\app\soap\clients\Client.java
+C:\Users\Petar Stojanovic\Desktop\test\example\Working_Solution\backend\spring-web-service-consumer\target\generated-sources\xjc\com\spring\app\soap\wsdl\GetAgreementsResponse.java
+C:\Users\Petar Stojanovic\Desktop\test\example\Working_Solution\backend\spring-web-service-consumer\target\generated-sources\xjc\com\spring\app\soap\wsdl\ObjectFactory.java
+C:\Users\Petar Stojanovic\Desktop\test\example\Working_Solution\backend\spring-web-service-consumer\target\generated-sources\xjc\com\spring\app\soap\wsdl\GetUserRequest.java
+C:\Users\Petar Stojanovic\Desktop\test\example\Working_Solution\backend\spring-web-service-consumer\src\main\java\com\spring\app\rest\services\AgreementClientServiceImpl.java
+C:\Users\Petar Stojanovic\Desktop\test\example\Working_Solution\backend\spring-web-service-consumer\target\generated-sources\xjc\com\spring\app\soap\wsdl\Agreement.java
+C:\Users\Petar Stojanovic\Desktop\test\example\Working_Solution\backend\spring-web-service-consumer\src\main\java\com\spring\app\rest\services\interfaces\IUserClientService.java
+C:\Users\Petar Stojanovic\Desktop\test\example\Working_Solution\backend\spring-web-service-consumer\src\main\java\com\spring\app\rest\configs\ServiceConfig.java
+C:\Users\Petar Stojanovic\Desktop\test\example\Working_Solution\backend\spring-web-service-consumer\src\main\java\com\spring\app\rest\controllers\UserController.java
+C:\Users\Petar Stojanovic\Desktop\test\example\Working_Solution\backend\spring-web-service-consumer\src\main\java\com\spring\app\rest\configs\MvcConfig.java
+C:\Users\Petar Stojanovic\Desktop\test\example\Working_Solution\backend\spring-web-service-consumer\src\main\java\com\spring\app\rest\controllers\AgreementController.java
+C:\Users\Petar Stojanovic\Desktop\test\example\Working_Solution\backend\spring-web-service-consumer\src\main\java\com\spring\app\rest\services\interfaces\IService1ClientService.java
+C:\Users\Petar Stojanovic\Desktop\test\example\Working_Solution\backend\spring-web-service-consumer\src\main\java\com\spring\app\rest\configs\ControllerConfig.java
+C:\Users\Petar Stojanovic\Desktop\test\example\Working_Solution\backend\spring-web-service-consumer\src\main\java\com\spring\app\soap\configs\UserClientConfig.java
+C:\Users\Petar Stojanovic\Desktop\test\example\Working_Solution\backend\spring-web-service-consumer\src\main\java\com\spring\app\soap\configs\AgreementClientConfig.java
+C:\Users\Petar Stojanovic\Desktop\test\example\Working_Solution\backend\spring-web-service-consumer\src\main\java\com\spring\app\rest\configs\RestConfig.java
+C:\Users\Petar Stojanovic\Desktop\test\example\Working_Solution\backend\spring-web-service-consumer\target\generated-sources\xjc\com\spring\app\soap\wsdl\GetUserResponse.java
+C:\Users\Petar Stojanovic\Desktop\test\example\Working_Solution\backend\spring-web-service-consumer\src\main\java\com\spring\app\soap\configs\Service1ClientConfig.java
+C:\Users\Petar Stojanovic\Desktop\test\example\Working_Solution\backend\spring-web-service-consumer\target\generated-sources\xjc\com\spring\app\soap\wsdl\package-info.java
+C:\Users\Petar Stojanovic\Desktop\test\example\Working_Solution\backend\spring-web-service-consumer\src\main\java\com\spring\app\rest\configs\WebConfig.java
+C:\Users\Petar Stojanovic\Desktop\test\example\Working_Solution\backend\spring-web-service-consumer\src\main\java\com\spring\app\rest\services\UserClientServiceImpl.java
+C:\Users\Petar Stojanovic\Desktop\test\example\Working_Solution\backend\spring-web-service-consumer\target\generated-sources\xjc\com\spring\app\soap\wsdl\User.java
+C:\Users\Petar Stojanovic\Desktop\test\example\Working_Solution\backend\spring-web-service-consumer\src\main\java\com\spring\app\rest\services\interfaces\IAgreementClientService.java

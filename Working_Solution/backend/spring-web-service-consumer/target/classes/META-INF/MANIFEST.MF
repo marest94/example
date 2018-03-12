@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Implementation-Title: spring-web-service-consumer
 Implementation-Version: 1
-Built-By: Mile Ignjatovic
+Built-By: Petar Stojanovic
 Implementation-Vendor-Id: com.spring.app
 Build-Jdk: 1.8.0_161
 Created-By: Maven Integration for Eclipse
