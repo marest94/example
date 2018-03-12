@@ -20,6 +20,9 @@ export class AgreementService {
     console.log("AgreementService::constructor();");
   }
 
+  getService1(){
+    return this.http.get("http://localhost:9999/agreements/service1").map((res:any) => res.json()).catch(this.error);  
+  }
   getAgreements(): Observable<Agreement[]> {
 
     console.log("userService::getAgreements();");
