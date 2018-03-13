@@ -26,7 +26,7 @@ public class AgreementsListConfig {
 	}
 	
 	@Bean
-	public XsdSchema usersListSchema() {
+	public XsdSchema agreementsListSchema() {
 		return new SimpleXsdSchema(new ClassPathResource("agreementsList.xsd"));
 	}
 
