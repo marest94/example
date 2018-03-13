@@ -16,16 +16,16 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for userList complex type.
+ * <p>Java class for agreementsList complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="userList">
+ * &lt;complexType name="agreementsList">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="user" type="{http://localhost:8080/soap}user" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="agremeent" type="{http://localhost:8080/soap}agreement" maxOccurs="unbounded" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -35,40 +35,40 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "userList", propOrder = {
-    "user"
+@XmlType(name = "agreementsList", propOrder = {
+    "agremeent"
 })
-public class UserList {
+public class AgreementsList {
 
-    protected List<User> user;
+    protected List<Agreement> agremeent;
 
     /**
-     * Gets the value of the user property.
+     * Gets the value of the agremeent property.
      * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the user property.
+     * This is why there is not a <CODE>set</CODE> method for the agremeent property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
-     *    getUser().add(newItem);
+     *    getAgremeent().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link User }
+     * {@link Agreement }
      * 
      * 
      */
-    public List<User> getUser() {
-        if (user == null) {
-            user = new ArrayList<User>();
+    public List<Agreement> getAgremeent() {
+        if (agremeent == null) {
+            agremeent = new ArrayList<Agreement>();
         }
-        return this.user;
+        return this.agremeent;
     }
 
 }

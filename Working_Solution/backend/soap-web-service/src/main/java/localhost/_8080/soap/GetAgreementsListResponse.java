@@ -25,12 +25,12 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="userList">
+ *         &lt;element name="agreementsList">
  *           &lt;complexType>
  *             &lt;complexContent>
  *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *                 &lt;sequence>
- *                   &lt;element name="user" type="{http://localhost:8080/soap}userList"/>
+ *                   &lt;element name="agreement" type="{http://localhost:8080/soap}agreementsList"/>
  *                 &lt;/sequence>
  *               &lt;/restriction>
  *             &lt;/complexContent>
@@ -46,36 +46,36 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "userList"
+    "agreementsList"
 })
-@XmlRootElement(name = "getUserListResponse")
-public class GetUserListResponse {
+@XmlRootElement(name = "getAgreementsListResponse")
+public class GetAgreementsListResponse {
 
     @XmlElement(required = true)
-    protected GetUserListResponse.UserList userList;
+    protected GetAgreementsListResponse.AgreementsList agreementsList;
 
     /**
-     * Gets the value of the userList property.
+     * Gets the value of the agreementsList property.
      * 
      * @return
      *     possible object is
-     *     {@link GetUserListResponse.UserList }
+     *     {@link GetAgreementsListResponse.AgreementsList }
      *     
      */
-    public GetUserListResponse.UserList getUserList() {
-        return userList;
+    public GetAgreementsListResponse.AgreementsList getAgreementsList() {
+        return agreementsList;
     }
 
     /**
-     * Sets the value of the userList property.
+     * Sets the value of the agreementsList property.
      * 
      * @param value
      *     allowed object is
-     *     {@link GetUserListResponse.UserList }
+     *     {@link GetAgreementsListResponse.AgreementsList }
      *     
      */
-    public void setUserList(GetUserListResponse.UserList value) {
-        this.userList = value;
+    public void setAgreementsList(GetAgreementsListResponse.AgreementsList value) {
+        this.agreementsList = value;
     }
 
 
@@ -89,7 +89,7 @@ public class GetUserListResponse {
      *   &lt;complexContent>
      *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
      *       &lt;sequence>
-     *         &lt;element name="user" type="{http://localhost:8080/soap}userList"/>
+     *         &lt;element name="agreement" type="{http://localhost:8080/soap}agreementsList"/>
      *       &lt;/sequence>
      *     &lt;/restriction>
      *   &lt;/complexContent>
@@ -100,35 +100,35 @@ public class GetUserListResponse {
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
-        "user"
+        "agreement"
     })
-    public static class UserList {
+    public static class AgreementsList {
 
         @XmlElement(required = true)
-        protected localhost._8080.soap.UserList user;
+        protected localhost._8080.soap.AgreementsList agreement;
 
         /**
-         * Gets the value of the user property.
+         * Gets the value of the agreement property.
          * 
          * @return
          *     possible object is
-         *     {@link localhost._8080.soap.UserList }
+         *     {@link localhost._8080.soap.AgreementsList }
          *     
          */
-        public localhost._8080.soap.UserList getUser() {
-            return user;
+        public localhost._8080.soap.AgreementsList getAgreement() {
+            return agreement;
         }
 
         /**
-         * Sets the value of the user property.
+         * Sets the value of the agreement property.
          * 
          * @param value
          *     allowed object is
-         *     {@link localhost._8080.soap.UserList }
+         *     {@link localhost._8080.soap.AgreementsList }
          *     
          */
-        public void setUser(localhost._8080.soap.UserList value) {
-            this.user = value;
+        public void setAgreement(localhost._8080.soap.AgreementsList value) {
+            this.agreement = value;
         }
 
     }
