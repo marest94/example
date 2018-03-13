@@ -18,29 +18,32 @@ import com.spring.app.soap.wsdl.User;
 @RequestMapping("/users")
 @CrossOrigin()
 public class UserController {
-	
+
 	private List<User> users = new ArrayList<User>();
-	
+
 	@Autowired
 	IUserClientService userService;
-	
+
 	@RequestMapping(path = "/add", method = RequestMethod.POST)
 	public String add(@RequestBody User u) {
-	    users.add(u);  // users list must be added like a property to the controller class, it cant be seen from the controller upper (getUsers controller)
-	    return "redirect:all";
+		users.add(u); // users list must be added like a property to the controller class, it cant be
+						// seen from the controller upper (getUsers controller)
+		return "redirect:all";
 	}
-	
+
 	@RequestMapping("/remove/{id}")
 	public String remove(@PathVariable int id) {
 		User u = userService.getUserById(id);
-		
+
 		users.remove(u);
-		
+
 		return "redirect:all";
 	}
-	
-	/*Purpose of this method is to emulate real answer from server with user array*/
-	
+
+	/*
+	 * Purpose of this method is to emulate real answer from server with user array
+	 */
+
 	@RequestMapping("/all")
 	public List<User> getUsers() {
 		User u1 = userService.getUserById(1);
@@ -61,9 +64,8 @@ public class UserController {
 		users.add(u7);
 		users.add(u8);
 		users.add(u9);
-		
+
 		return users;
 	}
-	
-	
+
 }

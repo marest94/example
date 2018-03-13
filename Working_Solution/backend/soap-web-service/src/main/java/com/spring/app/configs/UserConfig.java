@@ -13,7 +13,7 @@ import org.springframework.xml.xsd.XsdSchema;
 @Configuration
 @EnableWs
 @ComponentScan("com.spring.app") 
-public class AppConfig extends WsConfigurerAdapter {
+public class UserConfig extends WsConfigurerAdapter {
 	@Bean(name = "users")
 	public DefaultWsdl11Definition defaultWsdl11Definition(XsdSchema usersSchema) {
 		DefaultWsdl11Definition wsdl11Definition = new DefaultWsdl11Definition();
@@ -29,6 +29,8 @@ public class AppConfig extends WsConfigurerAdapter {
 	public XsdSchema usersSchema() {
 		return new SimpleXsdSchema(new ClassPathResource("users.xsd"));
 	}
+	
+	
 } 
 
 /*

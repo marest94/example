@@ -9,7 +9,7 @@ import javax.servlet.ServletException;
 import javax.servlet.ServletRegistration.Dynamic;
 
 import com.spring.app.configs.AgreementsConfig;
-import com.spring.app.configs.AppConfig;
+import com.spring.app.configs.UserConfig;
 
 @Configuration
 public class AppInitializer implements WebApplicationInitializer {
@@ -17,7 +17,7 @@ public class AppInitializer implements WebApplicationInitializer {
 	public void onStartup(ServletContext servletContext) throws ServletException {
 
 		AnnotationConfigWebApplicationContext ctx = new AnnotationConfigWebApplicationContext();
-		ctx.register(AppConfig.class);
+		ctx.register(UserConfig.class);
 		ctx.register(AgreementsConfig.class);
 		ctx.setServletContext(servletContext);
 		MessageDispatcherServlet servlet = new MessageDispatcherServlet();
