@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 C:\Users\Marko Stojanovic\Desktop\example\Working_Solution\backend\soap-web-service\src\main\java\localhost\_8080\soap\GetAgreementsRequest.java
 C:\Users\Marko Stojanovic\Desktop\example\Working_Solution\backend\soap-web-service\src\main\java\com\spring\app\repositories\Service1Repository.java
 C:\Users\Marko Stojanovic\Desktop\example\Working_Solution\backend\soap-web-service\src\main\java\localhost\_8080\soap\GetService1Request.java
@@ -22,3 +23,29 @@ C:\Users\Marko Stojanovic\Desktop\example\Working_Solution\backend\soap-web-serv
 C:\Users\Marko Stojanovic\Desktop\example\Working_Solution\backend\soap-web-service\src\main\java\com\spring\app\endpoints\UserEndpoint.java
 C:\Users\Marko Stojanovic\Desktop\example\Working_Solution\backend\soap-web-service\src\main\java\com\spring\app\repositories\UserRepository.java
 C:\Users\Marko Stojanovic\Desktop\example\Working_Solution\backend\soap-web-service\src\main\java\localhost\_8080\soap\ObjectFactory.java
+=======
+C:\Users\Nikola Pantelic\Desktop\example\Working_Solution\backend\soap-web-service\src\main\java\localhost\_8080\soap\GetUserListResponse.java
+C:\Users\Nikola Pantelic\Desktop\example\Working_Solution\backend\soap-web-service\src\main\java\localhost\_8080\soap\Agreement.java
+C:\Users\Nikola Pantelic\Desktop\example\Working_Solution\backend\soap-web-service\src\main\java\com\spring\app\configs\AgreementsConfig.java
+C:\Users\Nikola Pantelic\Desktop\example\Working_Solution\backend\soap-web-service\src\main\java\localhost\_8080\soap\GetService1Response.java
+C:\Users\Nikola Pantelic\Desktop\example\Working_Solution\backend\soap-web-service\src\main\java\localhost\_8080\soap\GetUserRequest.java
+C:\Users\Nikola Pantelic\Desktop\example\Working_Solution\backend\soap-web-service\src\main\java\com\spring\app\configs\Servis1Config.java
+C:\Users\Nikola Pantelic\Desktop\example\Working_Solution\backend\soap-web-service\src\main\java\com\spring\app\repositories\Service1Repository.java
+C:\Users\Nikola Pantelic\Desktop\example\Working_Solution\backend\soap-web-service\src\main\java\com\spring\app\endpoints\Service1Endpoint.java
+C:\Users\Nikola Pantelic\Desktop\example\Working_Solution\backend\soap-web-service\src\main\java\localhost\_8080\soap\package-info.java
+C:\Users\Nikola Pantelic\Desktop\example\Working_Solution\backend\soap-web-service\src\main\java\localhost\_8080\soap\ObjectFactory.java
+C:\Users\Nikola Pantelic\Desktop\example\Working_Solution\backend\soap-web-service\src\main\java\com\spring\app\endpoints\UserEndpoint.java
+C:\Users\Nikola Pantelic\Desktop\example\Working_Solution\backend\soap-web-service\src\main\java\localhost\_8080\soap\User.java
+C:\Users\Nikola Pantelic\Desktop\example\Working_Solution\backend\soap-web-service\src\main\java\com\spring\app\AppInitializer.java
+C:\Users\Nikola Pantelic\Desktop\example\Working_Solution\backend\soap-web-service\src\main\java\localhost\_8080\soap\GetAgreementsResponse.java
+C:\Users\Nikola Pantelic\Desktop\example\Working_Solution\backend\soap-web-service\src\main\java\com\spring\app\configs\UserConfig.java
+C:\Users\Nikola Pantelic\Desktop\example\Working_Solution\backend\soap-web-service\src\main\java\localhost\_8080\soap\Service1.java
+C:\Users\Nikola Pantelic\Desktop\example\Working_Solution\backend\soap-web-service\src\main\java\com\spring\app\configs\UserListConfig.java
+C:\Users\Nikola Pantelic\Desktop\example\Working_Solution\backend\soap-web-service\src\main\java\com\spring\app\endpoints\AgreementEndpoint.java
+C:\Users\Nikola Pantelic\Desktop\example\Working_Solution\backend\soap-web-service\src\main\java\localhost\_8080\soap\GetService1Request.java
+C:\Users\Nikola Pantelic\Desktop\example\Working_Solution\backend\soap-web-service\src\main\java\com\spring\app\repositories\UserRepository.java
+C:\Users\Nikola Pantelic\Desktop\example\Working_Solution\backend\soap-web-service\src\main\java\localhost\_8080\soap\GetUserResponse.java
+C:\Users\Nikola Pantelic\Desktop\example\Working_Solution\backend\soap-web-service\src\main\java\com\spring\app\repositories\AgreementRepository.java
+C:\Users\Nikola Pantelic\Desktop\example\Working_Solution\backend\soap-web-service\src\main\java\localhost\_8080\soap\GetAgreementsRequest.java
+C:\Users\Nikola Pantelic\Desktop\example\Working_Solution\backend\soap-web-service\src\main\java\localhost\_8080\soap\UserList.java
+>>>>>>> d6f44158f7c6df7925e754fa2e082bc12faa298b
