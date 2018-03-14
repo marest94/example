@@ -22,24 +22,4 @@
             <xs:element name="date" type="xs:string"/>
         </xs:sequence>
     </xs:complexType>
-    
-    <xs:element name="getAgreementsListResponse">
-		<xs:complexType>
-			<xs:sequence>
-				<xs:element name="agreementsList">
-					<xs:complexType>
-						<xs:sequence>
-							<xs:element name="agreement" type="tns:agreementsList" />
-						</xs:sequence>
-					</xs:complexType>
-				</xs:element>
-			</xs:sequence>
-		</xs:complexType>
-	</xs:element>
-	<xs:complexType name="agreementsList">
-		<xs:sequence>
-			<xs:element name="agremeent" type="tns:agreement"
-				minOccurs="0" maxOccurs="unbounded" />
-		</xs:sequence>
-	</xs:complexType>
 </xs:schema> 
