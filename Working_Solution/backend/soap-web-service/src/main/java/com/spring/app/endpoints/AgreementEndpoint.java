@@ -7,6 +7,8 @@ import org.springframework.ws.server.endpoint.annotation.RequestPayload;
 import org.springframework.ws.server.endpoint.annotation.ResponsePayload;
 
 import com.spring.app.repositories.AgreementRepository;
+
+import localhost._8080.soap.GetAgreementsListResponse;
 import localhost._8080.soap.GetAgreementsRequest;
 import localhost._8080.soap.GetAgreementsResponse;
 
@@ -21,11 +23,18 @@ public class AgreementEndpoint {
 	@ResponsePayload
 	public GetAgreementsResponse getAgrement(@RequestPayload GetAgreementsRequest request) {
 		GetAgreementsResponse response = new GetAgreementsResponse();
-		response.setAgreement(agreementRepository.getAgreement(request.getAgreementID()));
+		response.setAgreement(agreementRepository.getAgreementById(request.getAgreementID()));
 		
 		return response;
 	}
 	
-	
+	@PayloadRoot(namespace = NAMESPACE_URI, localPart = "getAgreementsListRequest")
+	public GetAgreementsListResponse getAgrementsList() {
+		GetAgreementsListResponse response = new GetAgreementsListResponse();
+		response.getAgreementsList().setAgreement(agreementRepository.getAgreementsList());;
+		
+		
+		return response;
+	}
 	
 }
