@@ -25,12 +25,12 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
- *         &lt;element name="agreementsList"&gt;
+ *         &lt;element name="userList"&gt;
  *           &lt;complexType&gt;
  *             &lt;complexContent&gt;
  *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *                 &lt;sequence&gt;
- *                   &lt;element name="agreement" type="{http://localhost:8080/soap}agreementsList"/&gt;
+ *                   &lt;element name="user" type="{http://localhost:8080/soap}userList"/&gt;
  *                 &lt;/sequence&gt;
  *               &lt;/restriction&gt;
  *             &lt;/complexContent&gt;
@@ -46,36 +46,36 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "agreementsList"
+    "userList"
 })
-@XmlRootElement(name = "getAgreementsListResponse")
-public class GetAgreementsListResponse {
+@XmlRootElement(name = "getUserListResponse")
+public class GetUserListResponse {
 
     @XmlElement(required = true)
-    protected GetAgreementsListResponse.AgreementsList agreementsList;
+    protected GetUserListResponse.UserList userList;
 
     /**
-     * Gets the value of the agreementsList property.
+     * Gets the value of the userList property.
      * 
      * @return
      *     possible object is
-     *     {@link GetAgreementsListResponse.AgreementsList }
+     *     {@link GetUserListResponse.UserList }
      *     
      */
-    public GetAgreementsListResponse.AgreementsList getAgreementsList() {
-        return agreementsList;
+    public GetUserListResponse.UserList getUserList() {
+        return userList;
     }
 
     /**
-     * Sets the value of the agreementsList property.
+     * Sets the value of the userList property.
      * 
      * @param value
      *     allowed object is
-     *     {@link GetAgreementsListResponse.AgreementsList }
+     *     {@link GetUserListResponse.UserList }
      *     
      */
-    public void setAgreementsList(GetAgreementsListResponse.AgreementsList value) {
-        this.agreementsList = value;
+    public void setUserList(GetUserListResponse.UserList value) {
+        this.userList = value;
     }
 
 
@@ -89,7 +89,7 @@ public class GetAgreementsListResponse {
      *   &lt;complexContent&gt;
      *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
      *       &lt;sequence&gt;
-     *         &lt;element name="agreement" type="{http://localhost:8080/soap}agreementsList"/&gt;
+     *         &lt;element name="user" type="{http://localhost:8080/soap}userList"/&gt;
      *       &lt;/sequence&gt;
      *     &lt;/restriction&gt;
      *   &lt;/complexContent&gt;
@@ -100,35 +100,35 @@ public class GetAgreementsListResponse {
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
-        "agreement"
+        "user"
     })
-    public static class AgreementsList {
+    public static class UserList {
 
         @XmlElement(required = true)
-        protected com.spring.app.soap.wsdl.AgreementsList agreement;
+        protected com.spring.app.soap.wsdl.UserList user;
 
         /**
-         * Gets the value of the agreement property.
+         * Gets the value of the user property.
          * 
          * @return
          *     possible object is
-         *     {@link com.spring.app.soap.wsdl.AgreementsList }
+         *     {@link com.spring.app.soap.wsdl.UserList }
          *     
          */
-        public com.spring.app.soap.wsdl.AgreementsList getAgreement() {
-            return agreement;
+        public com.spring.app.soap.wsdl.UserList getUser() {
+            return user;
         }
 
         /**
-         * Sets the value of the agreement property.
+         * Sets the value of the user property.
          * 
          * @param value
          *     allowed object is
-         *     {@link com.spring.app.soap.wsdl.AgreementsList }
+         *     {@link com.spring.app.soap.wsdl.UserList }
          *     
          */
-        public void setAgreement(com.spring.app.soap.wsdl.AgreementsList value) {
-            this.agreement = value;
+        public void setUser(com.spring.app.soap.wsdl.UserList value) {
+            this.user = value;
         }
 
     }

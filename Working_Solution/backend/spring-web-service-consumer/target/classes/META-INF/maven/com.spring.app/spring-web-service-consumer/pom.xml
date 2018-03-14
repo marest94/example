@@ -72,9 +72,6 @@
 		            	<schema>
 		                	<url>http://localhost:8080/soapws/service1.wsdl</url>
 		            	</schema>
-		            	<schema>
-		            		<url>http://localhost:8080/soapws/userList.wsdl</url>		            		
-		            	</schema>
 					</schemas>
 				</configuration>
 			</plugin>
